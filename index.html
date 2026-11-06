@@ -30,6 +30,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -40,6 +41,9 @@
       font-family: 'Lora', 'Noto Serif Tamil', Georgia, serif;
       line-height: 1.85;
       overflow-x: hidden;
+      width: 100%;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
 
     /* Warm Literary Header & Collapsible Mobile Nav */
@@ -292,7 +296,7 @@
       margin: 1.5rem auto 4rem;
       padding: 0 1.5rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
       gap: 2.5rem;
     }
 
@@ -307,6 +311,7 @@
       flex-direction: column;
       align-items: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-width: 0;
     }
 
     .reader-card:hover {
@@ -495,10 +500,12 @@
 
     .story-heading {
       font-family: 'Noto Serif Tamil', serif;
-      font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+      font-size: clamp(1.35rem, 3.4vw, 2.4rem);
       font-weight: 800;
       color: var(--ink-dark);
       margin-bottom: 0.4rem;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
     }
 
     .story-subheading {
@@ -730,6 +737,12 @@
     }
 
     /* Author Note Section */
+    .ornament {
+      color: var(--accent-gold);
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
     .author-letter {
       max-width: 780px;
       margin: 0 auto;
@@ -739,14 +752,60 @@
       padding: 2.75rem 2.5rem;
       box-shadow: 0 10px 30px rgba(58, 42, 33, 0.05);
       text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    .author-letter-heading {
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: clamp(1.22rem, 3vw, 1.8rem);
+      font-weight: 800;
+      color: var(--ink-dark);
+      line-height: 1.45;
+      margin-bottom: 1.1rem;
+      overflow-wrap: anywhere;
     }
 
     .signature {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif Tamil', serif;
       font-style: italic;
-      font-size: 1.8rem;
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
       color: var(--accent-burgundy);
       margin-top: 1.25rem;
+    }
+
+    @media (max-width: 640px) {
+      .bookshelf-showcase {
+        padding: 0 1rem;
+        gap: 1.5rem;
+        margin: 1rem auto 2.5rem;
+      }
+      .reader-card {
+        padding: 1.75rem 1.15rem;
+        border-radius: 16px;
+      }
+      .book-card-title {
+        font-size: 1.3rem;
+      }
+      .story-section {
+        padding: 3rem 1rem;
+      }
+      .novel-pullquote {
+        padding: 1.25rem 1.15rem;
+      }
+      .novel-pullquote p {
+        font-size: 0.98rem;
+      }
+      .story-prose p {
+        text-align: left;
+        font-size: 0.96rem;
+      }
+      .bookmark-panel {
+        padding: 1.35rem 1.15rem;
+      }
+      .author-letter {
+        padding: 1.75rem 1.15rem;
+        border-radius: 16px;
+      }
     }
 
     footer {
@@ -756,6 +815,7 @@
       color: var(--ink-muted);
       font-size: 0.88rem;
       font-family: 'Noto Sans Tamil', sans-serif;
+    }
     }
   </style>
 </head>
@@ -913,18 +973,18 @@
         <div class="story-subheading">The Fourth Shadow — An Upcoming Mystery Thriller-Comedy by KASI</div>
       </div>
 
-      <div style="background: var(--paper-card); border: 1px solid var(--border-soft); border-radius: 18px; padding: 2.5rem 2rem; box-shadow: 0 12px 32px rgba(58, 42, 33, 0.06);">
+      <div class="author-letter">
         <div class="book-3d" style="cursor: default; margin-bottom: 1.75rem;">
           <div class="book-3d-inner">
             <img src="assets/naankaavadhu-nizhal-cover.jpg" alt="நான்காவது நிழல் புத்தக அட்டை" />
           </div>
         </div>
 
-        <p style="font-size: 1.08rem; color: var(--ink-body); max-width: 620px; margin: 0 auto 1.25rem; line-height: 1.95;">
+        <p style="font-size: 1.02rem; color: var(--ink-body); max-width: 620px; margin: 0 auto 1.25rem; line-height: 1.9;">
           பனிமூட்டம் சூழ்ந்த மலைப்பாதையின் இருட்டில், நகைச்சுவையும் நட்பும் கலந்த ஒரு பயணத்தின் நடுவே விரியும் விறுவிறுப்பான மர்ம நாவல்.
         </p>
 
-        <div style="display: inline-block; background: #FFF8E7; color: #9A6700; border: 1px solid #F1DFB6; padding: 0.6rem 1.4rem; border-radius: 999px; font-family: 'Noto Sans Tamil', sans-serif; font-size: 0.9rem; font-weight: 700;">
+        <div style="display: inline-block; background: #FFF8E7; color: #9A6700; border: 1px solid #F1DFB6; padding: 0.55rem 1.1rem; border-radius: 16px; font-family: 'Noto Sans Tamil', sans-serif; font-size: 0.86rem; font-weight: 700; max-width: 100%;">
           🖋️ தற்போது விறுவிறுப்பாக எழுதப்பட்டு வருகிறது • விரைவில் வெளியாகும் (Coming Soon)
         </div>
       </div>
@@ -935,11 +995,11 @@
   <section id="author-note" class="story-section alt-bg">
     <div class="author-letter">
       <div class="ornament">❦</div>
-      <h2 class="story-heading" style="font-size: 1.85rem; margin-bottom: 1rem;">எழுத்தாளரின் மேஜையிலிருந்து...</h2>
-      <p style="color: var(--ink-body); font-size: 1.02rem; margin-bottom: 1rem;">
+      <h2 class="author-letter-heading">எழுத்தாளரின் மேஜையிலிருந்து...</h2>
+      <p style="color: var(--ink-body); font-size: 0.98rem; margin-bottom: 1rem;">
         அன்புள்ள வாசகர்களுக்கு, நமக்குள் சொல்லப்படாமல் போன வார்த்தைகளையும், கடந்து வந்த 90-களின் அழகான நினைவுகளையும் அசைபோடும் ஒரு முயற்சியே எனது முதல் நாவலான <strong>‘மௌனத்தின் பின்னணி இசை’</strong>. தற்போது அமேசான் கிண்டிலில் வெளியாகியுள்ள இந்நாவலை வாசித்து உங்கள் கருத்துக்களைப் பகிர்ந்துகொள்ள வேண்டுகிறேன்.
       </p>
-      <p style="color: var(--ink-body); font-size: 1.02rem;">
+      <p style="color: var(--ink-body); font-size: 0.98rem;">
         அடுத்ததாக, நகைச்சுவையும் விறுவிறுப்பான மர்மமும் இணைந்த <strong>‘நான்காவது நிழல்’ (The Fourth Shadow)</strong> நாவலை தற்போது எழுதி வருகிறேன். விரைவில் அப்புத்தகமும் உங்கள் கைகளில் தவழும்!
       </p>
       <div class="signature">— காசிராமன் (KASI)</div>
