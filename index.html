@@ -651,78 +651,127 @@
 
     .open-book-topbar {
       background: #F3ECE1;
-      padding: 0.9rem 1.5rem;
+      padding: 0.85rem 1.25rem;
       border-bottom: 1px solid #E2D6C3;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 0.75rem;
       font-family: 'Noto Sans Tamil', sans-serif;
-      font-size: 0.88rem;
-      color: var(--ink-muted);
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--ink-dark);
     }
 
     .close-reader-btn {
       background: var(--accent-burgundy);
       color: #fff;
       border: none;
-      padding: 0.35rem 0.9rem;
-      border-radius: 6px;
-      font-size: 0.82rem;
+      padding: 0.42rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
       cursor: pointer;
       font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-family: 'Noto Sans Tamil', sans-serif;
     }
 
     .open-book-page {
-      padding: 2.5rem 3rem;
+      padding: 2.25rem 2.75rem;
       overflow-y: auto;
       font-family: 'Noto Serif Tamil', Georgia, serif;
       color: var(--ink-dark);
-      line-height: 2;
-      font-size: 1.05rem;
+      line-height: 1.95;
+      font-size: 1.03rem;
       background:
         linear-gradient(90deg, rgba(0,0,0,0.03) 0%, transparent 6%, transparent 94%, rgba(0,0,0,0.03) 100%),
         #FDFBF7;
     }
 
-    @media (max-width: 640px) {
-      .open-book-page {
-        padding: 1.5rem 1.35rem;
-        font-size: 0.96rem;
-      }
-    }
-
     .open-book-page h3 {
-      font-size: 1.4rem;
+      font-size: clamp(1.15rem, 2.5vw, 1.4rem);
       color: var(--accent-burgundy);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.15rem;
       text-align: center;
+      line-height: 1.45;
     }
 
     .open-book-page p {
-      margin-bottom: 1.2rem;
-      text-indent: 1.5rem;
+      margin-bottom: 1.15rem;
+      text-indent: 1.25rem;
+    }
+
+    .reader-cta-wrap {
+      margin-top: 1.5rem;
+      text-indent: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .reader-cta-wrap .btn-primary {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      line-height: 1.45;
+      padding: 0.78rem 1rem;
+      font-size: 0.88rem;
     }
 
     .open-book-footer {
       background: #F3ECE1;
-      padding: 0.9rem 1.5rem;
+      padding: 0.8rem 1.15rem;
       border-top: 1px solid #E2D6C3;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 0.5rem;
       font-family: 'Noto Sans Tamil', sans-serif;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
+    }
+
+    #pageIndicator {
+      font-weight: 600;
+      color: var(--ink-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-size: 0.84rem;
     }
 
     .page-nav-btn {
       background: #FFFDF9;
       border: 1px solid #D5C7B2;
       color: var(--ink-dark);
-      padding: 0.45rem 1rem;
+      padding: 0.45rem 0.85rem;
       border-radius: 8px;
       font-weight: 600;
+      font-size: 0.82rem;
+      white-space: nowrap;
+      flex-shrink: 0;
       cursor: pointer;
       font-family: 'Noto Sans Tamil', sans-serif;
+    }
+
+    @media (max-width: 640px) {
+      .book-reader-modal {
+        padding: 0.75rem;
+      }
+      .open-book-topbar {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+      }
+      .open-book-page {
+        padding: 1.35rem 1.15rem;
+        font-size: 0.94rem;
+      }
+      .open-book-footer {
+        padding: 0.7rem 0.9rem;
+      }
+      .page-nav-btn {
+        padding: 0.42rem 0.7rem;
+        font-size: 0.78rem;
+      }
     }
 
     .page-nav-btn:hover:not(:disabled) {
@@ -1015,13 +1064,13 @@
     <div class="open-book-spread">
       <div class="open-book-topbar">
         <span id="readerBookTitle">புத்தக முன்னோட்டம்</span>
-        <button class="close-reader-btn" onclick="closeReader()">✕ மூடுக (Close Book)</button>
+        <button class="close-reader-btn" onclick="closeReader()">✕ மூடுக</button>
       </div>
       <div id="readerPageContent" class="open-book-page"></div>
       <div class="open-book-footer">
-        <button id="prevPageBtn" class="page-nav-btn" onclick="changePage(-1)">◀ முந்தைய பக்கம்</button>
-        <span id="pageIndicator" style="font-weight: 600; color: var(--ink-muted);">பக்கம் 1 / 2</span>
-        <button id="nextPageBtn" class="page-nav-btn" onclick="changePage(1)">அடுத்த பக்கம் ▶</button>
+        <button id="prevPageBtn" class="page-nav-btn" onclick="changePage(-1)">◀ முந்தைய</button>
+        <span id="pageIndicator">பக்கம் 1 / 2</span>
+        <button id="nextPageBtn" class="page-nav-btn" onclick="changePage(1)">அடுத்த ▶</button>
       </div>
     </div>
   </div>
@@ -1038,7 +1087,7 @@
           `<h3>முகில் புத்தகப் பதிப்பகமும், புளிசாத வாசனையும்</h3>
            <p>ராயப்பேட்டை 'முகில் புத்தகப் பதிப்பகத்தின்' மரப் படிக்கட்டுகளில் ஏறும்போதெல்லாம் ருத்ரனுக்குப் பழைய காகிதங்களின் வாசனை ஒருவித ஆறுதலைத் தரும். அன்று மதியம் அவனது மேஜைக்கு எதிரே, சுருள் முடியை அள்ளி முடிந்து, காதில் ஆடும் வெள்ளி ஜிமிக்கியோடு புத்தக அட்டைப்படத்திற்கு வண்ணம் தீட்டிக்கொண்டிருந்தாள் தியா.</p>
            <p>தன் பையிலிருந்து இரண்டு அடுக்கு சில்வர் டிபன் பாக்ஸைத் திறந்து அவள் நீட்டிய கோவில் புளிசாதத்தின் சுவையும், மெரினா கடற்கரைக் காற்றில் அவனது வாக்மேனின் இரண்டாவது போர்ட்டில் தன் ஹெட்போனை மாட்டிக்கொண்டு அவள் கேட்ட முதல் பாடலும் — ருத்ரனின் நீண்ட கால மௌனத்திற்குப் புதிய பின்னணி இசையை எழுதத் தொடங்கின.</p>
-           <p style="text-align:center; margin-top:1.5rem;"><a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" class="btn-primary" style="text-decoration:none;">📚 முழு நாவலையும் Amazon Kindle-ல் வாசிக்க இங்கே க்ளிக் செய்யவும் →</a></p>`
+           <div class="reader-cta-wrap"><a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" rel="noopener" class="btn-primary">📚 முழு நாவலையும் Amazon Kindle-ல் வாசிக்க →</a></div>`
         ]
       }
     };
