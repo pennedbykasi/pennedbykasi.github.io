@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="ta" class="scroll-smooth">
+<html lang="ta">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KASI (காசிராமன் காமராஜ்) | Official Author Website — மௌனத்தின் பின்னணி இசை & நான்காவது நிழல்</title>
-  <meta name="description" content="Official Author Website of Kasiraman Kamaraj (KASI). Read 'மௌனத்தின் பின்னணி இசை (The Background Score of Silence)' on Amazon Kindle and explore the upcoming Kodaikanal mystery thriller-comedy 'நான்காவது நிழல் (The Fourth Shadow)'." />
-  <meta property="og:title" content="KASI (காசிராமன் காமராஜ்) — Official Books & Author Page" />
-  <meta property="og:description" content="மௌனத்தின் பின்னணி இசை (Out Now on Amazon Kindle) & நான்காவது நிழல் (The Fourth Shadow — Currently in Writing)." />
-  <meta property="og:image" content="assets/mounathin-pinnani-isai-cover.jpg" />
+  <title>காசிராமன் (KASI) | வாசகர் பக்கம் — மௌனத்தின் பின்னணி இசை & நான்காவது நிழல்</title>
+  <meta name="description" content="எழுத்தாளர் காசிராமன் (KASI) அவர்களின் அதிகாரப்பூர்வ வாசகர் பக்கம். 'மௌனத்தின் பின்னணி இசை' (Amazon Kindle) மற்றும் எழுத்துப் பணியில் இருக்கும் 'நான்காவது நிழல்'." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&family=Noto+Serif+Tamil:wght@600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Serif+Tamil:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #070b14;
-      --bg-card: rgba(15, 23, 42, 0.78);
-      --gold: #f5b942;
-      --gold-light: #ffe299;
-      --rose: #f472b6;
-      --indigo-glow: #6366f1;
-      --crimson: #ef4444;
-      --emerald: #10b981;
-      --text-main: #f8fafc;
-      --text-muted: #cbd5e1;
+      --paper-bg: #FAF6F0;
+      --paper-warm: #F3ECE1;
+      --paper-card: #FFFDF9;
+      --ink-dark: #231B18;
+      --ink-body: #4A3E39;
+      --ink-muted: #7D6E67;
+      --accent-burgundy: #8C3A32;
+      --accent-gold: #B8863B;
+      --accent-teal: #2B4C59;
+      --border-soft: #E5DACB;
     }
 
     * {
@@ -31,827 +28,891 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: 'Inter', 'Noto Sans Tamil', sans-serif;
-      line-height: 1.7;
+      background-color: var(--paper-bg);
+      background-image: radial-gradient(rgba(184, 134, 59, 0.05) 1px, transparent 0);
+      background-size: 24px 24px;
+      color: var(--ink-dark);
+      font-family: 'Lora', 'Noto Serif Tamil', Georgia, serif;
+      line-height: 1.85;
       overflow-x: hidden;
     }
 
-    /* Sticky Glass Navbar */
+    /* Warm Literary Header */
     header {
-      position: fixed;
+      background: rgba(250, 246, 240, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-soft);
+      position: sticky;
       top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: rgba(7, 11, 20, 0.85);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 90;
     }
 
-    .nav-container {
-      max-width: 1240px;
+    .nav-wrap {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 1rem 1.5rem;
+      padding: 1.1rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .brand {
+    .author-brand {
+      text-decoration: none;
+      color: var(--ink-dark);
       display: flex;
-      align-items: center;
+      align-items: baseline;
       gap: 0.75rem;
-      text-decoration: none;
-      color: #fff;
     }
 
-    .brand-logo {
-      font-family: 'Cinzel', serif;
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: 4px;
-      background: linear-gradient(135deg, #fff 0%, var(--gold) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .author-brand-name {
+      font-family: 'Cormorant Garamond', 'Noto Serif Tamil', serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--ink-dark);
     }
 
-    .brand-sub {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      border-left: 1px solid rgba(255,255,255,0.2);
-      padding-left: 0.75rem;
+    .author-brand-ta {
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      font-weight: 500;
     }
 
-    .nav-links {
+    .nav-menu {
       display: flex;
       align-items: center;
-      gap: 1.75rem;
+      gap: 2rem;
     }
 
-    .nav-links a {
-      color: var(--text-muted);
+    .nav-menu a {
       text-decoration: none;
+      color: var(--ink-body);
+      font-family: 'Noto Sans Tamil', sans-serif;
       font-size: 0.92rem;
       font-weight: 500;
       transition: color 0.2s;
     }
 
-    .nav-links a:hover {
-      color: var(--gold);
+    .nav-menu a:hover {
+      color: var(--accent-burgundy);
     }
 
-    .nav-cta {
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      color: #000 !important;
-      font-weight: 700 !important;
-      padding: 0.5rem 1.15rem;
-      border-radius: 999px;
-      font-size: 0.85rem !important;
-      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
-      transition: transform 0.2s, box-shadow 0.2s !important;
+    .nav-kindle-btn {
+      background: var(--accent-burgundy);
+      color: #fff !important;
+      padding: 0.55rem 1.25rem;
+      border-radius: 99px;
+      font-size: 0.86rem !important;
+      font-weight: 600 !important;
+      box-shadow: 0 4px 12px rgba(140, 58, 50, 0.22);
+      transition: transform 0.2s, background 0.2s !important;
     }
 
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.55);
+    .nav-kindle-btn:hover {
+      background: #722d26;
+      transform: translateY(-1px);
     }
 
-    /* Hero Section */
-    .hero {
-      position: relative;
-      padding: 8.5rem 1.5rem 5rem;
-      background:
-        radial-gradient(circle at 20% 25%, rgba(99, 102, 241, 0.18) 0%, transparent 45%),
-        radial-gradient(circle at 80% 30%, rgba(244, 114, 182, 0.16) 0%, transparent 45%),
-        radial-gradient(circle at 50% 80%, rgba(245, 185, 66, 0.12) 0%, transparent 50%),
-        linear-gradient(180deg, #070b14 0%, #0d1424 100%);
-      overflow: hidden;
-    }
-
-    .hero-container {
-      max-width: 1240px;
+    /* Literary Hero Intro */
+    .hero-literary {
+      max-width: 980px;
       margin: 0 auto;
+      padding: 4.5rem 1.5rem 3rem;
       text-align: center;
     }
 
-    .author-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.4rem 1.1rem;
-      border-radius: 999px;
-      background: rgba(245, 185, 66, 0.12);
-      border: 1px solid rgba(245, 185, 66, 0.35);
-      color: var(--gold-light);
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-title {
-      font-family: 'Noto Serif Tamil', 'Cinzel', serif;
-      font-size: clamp(2rem, 4.5vw, 3.5rem);
-      font-weight: 900;
-      line-height: 1.25;
+    .ornament {
+      color: var(--accent-gold);
+      font-size: 1.35rem;
+      letter-spacing: 8px;
       margin-bottom: 1rem;
-      background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 60%, #f5b942 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
-    .hero-subtitle {
-      max-width: 760px;
-      margin: 0 auto 3.5rem;
-      color: var(--text-muted);
-      font-size: 1.08rem;
+    .hero-quote {
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: clamp(1.55rem, 3.2vw, 2.35rem);
+      font-weight: 700;
+      color: var(--ink-dark);
+      line-height: 1.45;
+      margin-bottom: 1.15rem;
     }
 
-    /* Dual Books Showcase Grid in Hero */
-    .hero-books-grid {
+    .hero-subtext {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* 3D Physical Book Showcase */
+    .bookshelf-showcase {
+      max-width: 1120px;
+      margin: 1.5rem auto 4rem;
+      padding: 0 1.5rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2.5rem;
-      max-width: 1080px;
-      margin: 0 auto;
-      text-align: left;
     }
 
-    .book-showcase-card {
-      position: relative;
-      background: rgba(15, 23, 42, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 24px;
-      padding: 2rem;
+    .reader-card {
+      background: var(--paper-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 12px 32px rgba(58, 42, 33, 0.06);
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
-      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .book-showcase-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(245, 185, 66, 0.45);
-      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
+    .reader-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 42px rgba(58, 42, 33, 0.11);
     }
 
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.35rem 0.95rem;
-      border-radius: 999px;
+    .ribbon-tag {
+      font-family: 'Noto Sans Tamil', sans-serif;
       font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 1.4rem;
+      font-weight: 600;
+      padding: 0.32rem 1rem;
+      border-radius: 99px;
+      margin-bottom: 1.75rem;
+      letter-spacing: 0.4px;
     }
 
-    .status-live {
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid rgba(16, 185, 129, 0.45);
-      color: #34d399;
+    .ribbon-available {
+      background: #FDF2EF;
+      color: var(--accent-burgundy);
+      border: 1px solid #F3D1C8;
     }
 
-    .status-writing {
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.45);
-      color: #fbbf24;
+    .ribbon-writing {
+      background: #F4F7F8;
+      color: var(--accent-teal);
+      border: 1px solid #CFE0E6;
     }
 
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: currentColor;
-      box-shadow: 0 0 8px currentColor;
-      animation: pulse 1.8s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.45; transform: scale(1.25); }
-    }
-
-    .cover-wrapper {
+    /* 3D Hardcover/Paperback Book Mockup with Page Edges */
+    .book-3d {
       position: relative;
-      width: 230px;
-      aspect-ratio: 10 / 16;
-      margin-bottom: 1.5rem;
-      border-radius: 12px;
+      width: 215px;
+      aspect-ratio: 10 / 15.6;
+      margin: 0 auto 1.85rem;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .book-3d-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px 10px 10px 4px;
+      box-shadow:
+        -6px 6px 16px rgba(35, 27, 24, 0.22),
+        6px 0 0 #EDE5D8,
+        7px 0 0 #D8CBB8,
+        10px 0 0 #F4EFE6,
+        11px 0 0 #CFC1AE,
+        14px 12px 28px rgba(35, 27, 24, 0.26);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
       overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.12);
-      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .book-showcase-card:hover .cover-wrapper {
-      transform: scale(1.04) rotate(-1deg);
+    .book-3d:hover .book-3d-inner {
+      transform: rotateY(-8deg) translateY(-4px);
     }
 
-    .cover-wrapper img {
+    /* Subtle book spine crease on the left edge */
+    .book-3d-inner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 14px;
+      background: linear-gradient(90deg, rgba(0,0,0,0.28) 0%, rgba(255,255,255,0.18) 45%, rgba(0,0,0,0.08) 80%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .book-3d-inner img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    .card-book-title {
+    .book-card-title {
       font-family: 'Noto Serif Tamil', serif;
       font-size: 1.55rem;
       font-weight: 800;
-      color: #fff;
-      margin-bottom: 0.25rem;
+      color: var(--ink-dark);
+      margin-bottom: 0.2rem;
     }
 
-    .card-book-eng {
-      font-size: 0.95rem;
-      color: var(--gold);
+    .book-card-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--accent-gold);
       font-weight: 600;
-      margin-bottom: 0.85rem;
+      margin-bottom: 1rem;
     }
 
-    .card-book-desc {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
+    .book-card-hook {
+      font-size: 0.96rem;
+      color: var(--ink-body);
+      margin-bottom: 1.65rem;
       flex-grow: 1;
     }
 
-    .btn-group {
+    .card-actions {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
+      flex-direction: column;
+      gap: 0.7rem;
       width: 100%;
     }
 
-    .btn {
+    .btn-primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      padding: 0.78rem 1.4rem;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 0.92rem;
-      text-decoration: none;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s ease;
-    }
-
-    .btn-amazon {
-      background: linear-gradient(135deg, #ff9900 0%, #e68a00 100%);
-      color: #090d16;
-      box-shadow: 0 8px 20px rgba(255, 153, 0, 0.32);
-      width: 100%;
-    }
-
-    .btn-amazon:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 26px rgba(255, 153, 0, 0.5);
-    }
-
-    .btn-outline {
-      background: rgba(255, 255, 255, 0.06);
+      background: var(--accent-burgundy);
       color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      width: 100%;
+      text-decoration: none;
+      padding: 0.82rem 1.4rem;
+      border-radius: 10px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
     }
 
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: var(--gold);
-      color: var(--gold-light);
+    .btn-primary:hover {
+      background: #722d26;
+      transform: translateY(-1px);
     }
 
-    /* Detailed Book Sections */
-    .section {
-      padding: 6rem 1.5rem;
-      position: relative;
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--paper-warm);
+      color: var(--ink-dark);
+      text-decoration: none;
+      padding: 0.78rem 1.4rem;
+      border-radius: 10px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid var(--border-soft);
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
     }
 
-    .section-romance {
-      background: linear-gradient(135deg, rgba(30, 41, 82, 0.35) 0%, rgba(88, 28, 69, 0.25) 100%);
-      border-top: 1px solid rgba(255, 255, 255, 0.07);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    .btn-secondary:hover {
+      background: #EAE0D0;
+      border-color: var(--accent-gold);
     }
 
-    .section-thriller {
-      background:
-        radial-gradient(circle at 85% 20%, rgba(239, 68, 68, 0.1) 0%, transparent 45%),
-        radial-gradient(circle at 15% 70%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
-        #060a12;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    /* Story Sections — Warm Editorial Layout */
+    .story-section {
+      padding: 5rem 1.5rem;
+      border-top: 1px solid var(--border-soft);
     }
 
-    .container {
-      max-width: 1200px;
+    .story-section.alt-bg {
+      background-color: var(--paper-warm);
+    }
+
+    .story-container {
+      max-width: 1060px;
       margin: 0 auto;
     }
 
-    .book-detail-grid {
+    .story-header {
+      text-align: center;
+      max-width: 740px;
+      margin: 0 auto 3.25rem;
+    }
+
+    .story-genre {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.85rem;
+      color: var(--accent-burgundy);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .story-heading {
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--ink-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .story-subheading {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--ink-muted);
+    }
+
+    /* Pull Quote Like Inside a Novel */
+    .novel-pullquote {
+      background: var(--paper-card);
+      border: 1px solid var(--border-soft);
+      border-left: 4px solid var(--accent-gold);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      margin: 0 auto 2.75rem;
+      max-width: 860px;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(58, 42, 33, 0.04);
+    }
+
+    .novel-pullquote p {
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: 1.12rem;
+      font-style: italic;
+      color: var(--ink-dark);
+      line-height: 1.9;
+    }
+
+    .novel-pullquote cite {
+      display: block;
+      margin-top: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--accent-gold);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .story-columns {
       display: grid;
-      grid-template-columns: 360px 1fr;
-      gap: 3.5rem;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 2.75rem;
       align-items: start;
     }
 
-    @media (max-width: 900px) {
-      .book-detail-grid {
+    @media (max-width: 860px) {
+      .story-columns {
         grid-template-columns: 1fr;
       }
-      .detail-cover-col {
-        max-width: 300px;
-        margin: 0 auto;
-      }
-      .nav-links {
+      .nav-menu {
         display: none;
       }
     }
 
-    .detail-cover-box {
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.15);
-    }
-
-    .detail-cover-box img {
-      width: 100%;
-      display: block;
-    }
-
-    .section-eyebrow {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-
-    .detail-title {
-      font-family: 'Noto Serif Tamil', serif;
-      font-size: clamp(1.85rem, 3.5vw, 2.75rem);
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.2;
-      margin-bottom: 0.35rem;
-    }
-
-    .detail-subtitle {
-      font-size: 1.2rem;
-      color: #94a3b8;
-      margin-bottom: 1.5rem;
-      font-style: italic;
-    }
-
-    .meta-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .meta-tag {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 0.35rem 0.85rem;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      color: #e2e8f0;
-    }
-
-    .synopsis-box {
-      background: rgba(15, 23, 42, 0.65);
-      border-left: 4px solid var(--gold);
-      padding: 1.5rem;
-      border-radius: 0 16px 16px 0;
-      margin-bottom: 1.75rem;
-    }
-
-    .synopsis-box p {
-      margin-bottom: 1rem;
-      color: #e2e8f0;
-      font-size: 0.98rem;
-    }
-
-    .synopsis-box p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Character Cards Grid */
-    .char-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0 2rem;
-    }
-
-    .char-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      padding: 1.15rem;
-      border-radius: 14px;
-    }
-
-    .char-name {
-      font-weight: 800;
-      color: var(--gold-light);
+    .story-prose p {
+      margin-bottom: 1.25rem;
+      color: var(--ink-body);
       font-size: 1.02rem;
-      margin-bottom: 0.3rem;
+      text-align: justify;
     }
 
-    .char-role {
-      font-size: 0.78rem;
-      color: #94a3b8;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.5rem;
+    .dropcap::first-letter {
+      float: left;
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: 2.9rem;
+      line-height: 0.9;
+      padding-right: 0.6rem;
+      padding-top: 0.2rem;
+      color: var(--accent-burgundy);
+      font-weight: 800;
     }
 
-    .char-desc {
-      font-size: 0.86rem;
-      color: #cbd5e1;
-    }
-
-    /* Writing Progress Tracker for Book 2 */
-    .progress-card {
-      background: rgba(245, 158, 11, 0.08);
-      border: 1px solid rgba(245, 158, 11, 0.3);
+    /* Reader's Character Bookmark Cards */
+    .bookmark-panel {
+      background: var(--paper-card);
+      border: 1px solid var(--border-soft);
       border-radius: 16px;
-      padding: 1.35rem 1.5rem;
-      margin-bottom: 1.75rem;
+      padding: 1.75rem;
+      box-shadow: 0 8px 24px rgba(58, 42, 33, 0.05);
     }
 
-    .progress-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.65rem;
+    .bookmark-title {
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: 1.15rem;
       font-weight: 700;
+      color: var(--ink-dark);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.1rem;
+      border-bottom: 1px dashed var(--border-soft);
+    }
+
+    .character-item {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid #F2EBE1;
+    }
+
+    .character-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .character-item strong {
+      display: block;
+      color: var(--accent-burgundy);
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .character-item span {
       font-size: 0.92rem;
-      color: var(--gold-light);
+      color: var(--ink-body);
     }
 
-    .progress-bar-bg {
-      width: 100%;
-      height: 10px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 999px;
-      overflow: hidden;
-      margin-bottom: 0.65rem;
-    }
-
-    .progress-bar-fill {
-      width: 35%;
-      height: 100%;
-      background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%);
-      border-radius: 999px;
-    }
-
-    .rec-badge {
-      font-family: 'Share Tech Mono', monospace;
-      color: #f87171;
-      font-size: 0.85rem;
-      letter-spacing: 2px;
-      margin-bottom: 0.5rem;
-      display: inline-block;
-    }
-
-    /* Sneak Peek Modal */
-    .modal-overlay {
+    /* Interactive Open-Book Page Reader Modal */
+    .book-reader-modal {
       position: fixed;
       inset: 0;
       z-index: 200;
-      background: rgba(3, 6, 12, 0.88);
-      backdrop-filter: blur(10px);
+      background: rgba(35, 27, 24, 0.78);
+      backdrop-filter: blur(6px);
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 1.5rem;
+      padding: 1.25rem;
     }
 
-    .modal-overlay.active {
+    .book-reader-modal.active {
       display: flex;
     }
 
-    .modal-content {
-      background: #0f172a;
-      border: 1px solid rgba(245, 185, 66, 0.35);
-      max-width: 780px;
+    .open-book-spread {
+      background: #FDFBF7;
+      border: 1px solid #D8CBB8;
+      border-radius: 14px;
+      max-width: 920px;
       width: 100%;
-      max-height: 85vh;
-      border-radius: 20px;
-      overflow-y: auto;
-      padding: 2.25rem;
-      position: relative;
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9);
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.55),
+        0 0 0 6px #EFE7DA;
+      overflow: hidden;
     }
 
-    .modal-close {
-      position: sticky;
-      top: 0;
-      float: right;
-      background: rgba(255, 255, 255, 0.1);
+    .open-book-topbar {
+      background: #F3ECE1;
+      padding: 0.9rem 1.5rem;
+      border-bottom: 1px solid #E2D6C3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+    }
+
+    .close-reader-btn {
+      background: var(--accent-burgundy);
       color: #fff;
       border: none;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      font-size: 1.2rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
       cursor: pointer;
+      font-weight: 600;
     }
 
-    .modal-close:hover {
-      background: var(--crimson);
+    .open-book-page {
+      padding: 2.5rem 3rem;
+      overflow-y: auto;
+      font-family: 'Noto Serif Tamil', Georgia, serif;
+      color: var(--ink-dark);
+      line-height: 2;
+      font-size: 1.05rem;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.03) 0%, transparent 6%, transparent 94%, rgba(0,0,0,0.03) 100%),
+        #FDFBF7;
     }
 
-    /* Author Section & Footer */
-    .author-section {
-      padding: 5rem 1.5rem;
+    @media (max-width: 640px) {
+      .open-book-page {
+        padding: 1.5rem 1.35rem;
+        font-size: 0.96rem;
+      }
+    }
+
+    .open-book-page h3 {
+      font-size: 1.4rem;
+      color: var(--accent-burgundy);
+      margin-bottom: 1.25rem;
       text-align: center;
-      background: #050811;
     }
 
-    .author-box {
-      max-width: 760px;
+    .open-book-page p {
+      margin-bottom: 1.2rem;
+      text-indent: 1.5rem;
+    }
+
+    .open-book-footer {
+      background: #F3ECE1;
+      padding: 0.9rem 1.5rem;
+      border-top: 1px solid #E2D6C3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.88rem;
+    }
+
+    .page-nav-btn {
+      background: #FFFDF9;
+      border: 1px solid #D5C7B2;
+      color: var(--ink-dark);
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+
+    .page-nav-btn:hover:not(:disabled) {
+      background: var(--accent-burgundy);
+      color: #fff;
+      border-color: var(--accent-burgundy);
+    }
+
+    .page-nav-btn:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    /* Author Note Section */
+    .author-letter {
+      max-width: 780px;
       margin: 0 auto;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 2.5rem;
-      border-radius: 24px;
+      background: var(--paper-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 2.75rem 2.5rem;
+      box-shadow: 0 10px 30px rgba(58, 42, 33, 0.05);
+      text-align: center;
+    }
+
+    .signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.8rem;
+      color: var(--accent-burgundy);
+      margin-top: 1.25rem;
     }
 
     footer {
-      padding: 2.5rem 1.5rem;
       text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      color: #64748b;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border-soft);
+      color: var(--ink-muted);
       font-size: 0.88rem;
+      font-family: 'Noto Sans Tamil', sans-serif;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Cozy Bookstore Navigation -->
   <header>
-    <div class="nav-container">
-      <a href="#" class="brand">
-        <span class="brand-logo">KASI</span>
-        <span class="brand-sub">காசிராமன் காமராஜ் | Author</span>
+    <div class="nav-wrap">
+      <a href="#" class="author-brand">
+        <span class="author-brand-name">KASI</span>
+        <span class="author-brand-ta">எழுத்தாளர் காசிராமன்</span>
       </a>
-      <nav class="nav-links">
-        <a href="#book1">மௌனத்தின் பின்னணி இசை</a>
-        <a href="#book2">நான்காவது நிழல் (In Writing)</a>
-        <a href="#author">எழுத்தாளர் பற்றி</a>
-        <a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" rel="noopener" class="nav-cta">🛒 Buy on Amazon Kindle</a>
+      <nav class="nav-menu">
+        <a href="#mounathin-pinnani-isai">மௌனத்தின் பின்னணி இசை</a>
+        <a href="#naankaavadhu-nizhal">நான்காவது நிழல் (எழுத்துப் பணியில்)</a>
+        <a href="#author-note">எழுத்தாளரின் குறிப்பு</a>
+        <a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" rel="noopener" class="nav-kindle-btn">
+          📚 Read on Amazon Kindle
+        </a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-container">
-      <div class="author-pill">✨ Official Author Bookshelf — Kasiraman Kamaraj (KASI)</div>
-      <h1 class="hero-title">கதைகளின் உலகிற்கு நல்வரவு</h1>
-      <p class="hero-subtitle">
-        90-களின் மனதை வருடும் காதல் காவியம் முதல், கொடைக்கானல் பனிமூட்டத்தின் பின்னால் ஒளிந்திருக்கும் திகில்-காமெடி மர்மம் வரை — எழுத்தாளர் <strong>காசிராமன் (KASI)</strong> அவர்களின் படைப்புகள்.
+  <!-- Literary Welcome -->
+  <section class="hero-literary">
+    <div class="ornament">✦ ✦ ✦</div>
+    <h1 class="hero-quote">“ஒவ்வொரு புத்தகமும் நாம் வாழ நினைத்த இன்னொரு வாழ்க்கையின் திறவுகோல்.”</h1>
+    <p class="hero-subtext">
+      எழுத்தாளர் <strong>காசிராமன் (KASI)</strong> அவர்களின் வாசகர் பக்கத்திற்கு நல்வரவு. இங்கே புத்தகங்களின் முதல் பக்கங்களைப் புரட்டிப் பார்க்கலாம், கதை மாந்தர்களைச் சந்திக்கலாம்.
+    </p>
+  </section>
+
+  <!-- Two Books on the Reading Table -->
+  <section class="bookshelf-showcase">
+    <!-- Book 1 -->
+    <div class="reader-card">
+      <div class="ribbon-tag ribbon-available">✨ அமேசான் கிண்டிலில் இப்போது வாசிக்கலாம் (Out Now)</div>
+      <div class="book-3d" onclick="openReader('book1', 0)" title="புத்தகத்தைப் புரட்டிப் பார்க்க க்ளிக் செய்யவும்">
+        <div class="book-3d-inner">
+          <img src="assets/mounathin-pinnani-isai-cover.jpg" alt="மௌனத்தின் பின்னணி இசை புத்தக அட்டை" />
+        </div>
+      </div>
+      <h2 class="book-card-title">மௌனத்தின் பின்னணி இசை</h2>
+      <div class="book-card-en">The Background Score of Silence</div>
+      <p class="book-card-hook">
+        சென்னையின் மழைக்கால மாலையில், ஒரு வாக்மேனின் இரண்டு இயர்போன்கள் வழியே இணையும் ருத்ரன் மற்றும் தியாவின் மனதை வருடும் காதல் காவியம்.
       </p>
+      <div class="card-actions">
+        <a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" rel="noopener" class="btn-primary">
+          🛒 Amazon Kindle-ல் வாங்க / வாசிக்க (₹149 / KU)
+        </a>
+        <button onclick="openReader('book1', 0)" class="btn-secondary">
+          📖 முதல் பக்கங்களைப் புரட்டிப் பார்க்க (Read Sample Pages)
+        </button>
+      </div>
+    </div>
 
-      <div class="hero-books-grid">
-        <!-- Book 1 Card -->
-        <div class="book-showcase-card">
-          <div class="status-badge status-live">
-            <span class="pulse-dot"></span> Out Now on Amazon Kindle
-          </div>
-          <div class="cover-wrapper">
-            <img src="assets/mounathin-pinnani-isai-cover.jpg" alt="மௌனத்தின் பின்னணி இசை Book Cover" />
-          </div>
-          <h2 class="card-book-title">மௌனத்தின் பின்னணி இசை</h2>
-          <div class="card-book-eng">The Background Score of Silence</div>
-          <p class="card-book-desc">
-            சென்னையின் 90s கிட் ருத்ரன் மற்றும் ஓவியப் பெண் தியாவின் மனதை வருடும் காதல் நாவல். இளையராஜாவின் இசையும், வாக்மேன் நினைவுகளும், மழைக்கால 'பக்கம் 96'-ன் காதலும்!
-          </p>
-          <div class="btn-group">
-            <a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" rel="noopener" class="btn btn-amazon">
-              📖 Buy on Amazon Kindle (₹149 / KU)
-            </a>
-            <a href="#book1" class="btn btn-outline">புத்தக விவரங்கள் →</a>
-          </div>
+    <!-- Book 2 -->
+    <div class="reader-card">
+      <div class="ribbon-tag ribbon-writing">🖋️ தற்போது எழுத்துப் பணியில் உள்ளது (Currently in Writing)</div>
+      <div class="book-3d" onclick="openReader('book2', 0)" title="முதல் அத்தியாயத்தைப் புரட்டிப் பார்க்க க்ளிக் செய்யவும்">
+        <div class="book-3d-inner">
+          <img src="assets/naankaavadhu-nizhal-cover.jpg" alt="நான்காவது நிழல் புத்தக அட்டை" />
         </div>
-
-        <!-- Book 2 Card -->
-        <div class="book-showcase-card">
-          <div class="status-badge status-writing">
-            <span class="pulse-dot"></span> Currently in Writing (எழுத்துப் பணியில்)
-          </div>
-          <div class="cover-wrapper">
-            <img src="assets/naankaavadhu-nizhal-cover.jpg" alt="நான்காவது நிழல் — The Fourth Shadow Book Cover" />
-          </div>
-          <h2 class="card-book-title">நான்காவது நிழல்</h2>
-          <div class="card-book-eng">The Fourth Shadow — A Mystery Thriller Comedy</div>
-          <p class="card-book-desc">
-            கொடைக்கானலின் 14-வது கொண்டைஊசி வளைவில் இரவு 11:42 மணிக்கு வீடியோ எடுக்கச் செல்லும் மூன்று நண்பர்கள் (கதிர், ரியாஸ், பாலா)... அவர்களின் கேமராவில் சிக்கும் அந்த 'நான்காவது நிழல்' யாருடையது?
-          </p>
-          <div class="btn-group">
-            <button onclick="openModal()" class="btn btn-outline" style="border-color: rgba(245,185,66,0.5); color: #ffe299;">
-              🎬 Read Chapter 1 Sneak Peek
-            </button>
-            <a href="#book2" class="btn btn-outline">கதைச் சுருக்கம் & நிலை →</a>
-          </div>
-        </div>
+      </div>
+      <h2 class="book-card-title">நான்காவது நிழல்</h2>
+      <div class="book-card-en">The Fourth Shadow</div>
+      <p class="book-card-hook">
+        கொடைக்கானலின் 14-வது கொண்டைஊசி வளைவில் நள்ளிரவு 11:42 மணிக்குத் துப்பறியச் செல்லும் மூன்று நண்பர்கள்... சிரிப்பும் திகிலும் கலந்த மர்மப் பயணம்!
+      </p>
+      <div class="card-actions">
+        <button onclick="openReader('book2', 0)" class="btn-primary" style="background: var(--accent-teal);">
+          📖 முதல் 3 அத்தியாயங்களின் முன்னோட்டம் (Read Preview)
+        </button>
+        <a href="#naankaavadhu-nizhal" class="btn-secondary">
+          🔍 கதை மற்றும் கதாபாத்திரங்கள் பற்றி அறிய
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Book 1 Full Detail Section -->
-  <section id="book1" class="section section-romance">
-    <div class="container">
-      <div class="book-detail-grid">
-        <div class="detail-cover-col">
-          <div class="detail-cover-box">
-            <img src="assets/mounathin-pinnani-isai-cover.jpg" alt="மௌனத்தின் பின்னணி இசை — Mounathin Pinnani Isai Cover" />
-          </div>
-        </div>
-
-        <div>
-          <div class="section-eyebrow">Book #01 • Contemporary Tamil Romance Novel</div>
-          <h2 class="detail-title">மௌனத்தின் பின்னணி இசை (Mounathin Pinnani Isai)</h2>
-          <div class="detail-subtitle">The Background Score of Silence — A 90s Kid's Romantic Novel</div>
-
-          <div class="meta-tags">
-            <span class="meta-tag">🟢 Status: Live on Amazon Kindle</span>
-            <span class="meta-tag">📄 164 Pages (11 Illustrated Chapters)</span>
-            <span class="meta-tag">🎧 Free on Kindle Unlimited / ₹149</span>
-            <span class="meta-tag">ASIN: B0HQK6726R</span>
-          </div>
-
-          <div class="synopsis-box">
-            <p>
-              <strong>தமிழ் சுருக்கம்:</strong> 1990-களில் பிறந்து வளர்ந்த ஒரு சராசரி இளைஞனின் மௌனத்திற்கும் தயக்கத்திற்கும் பின்னால் ஒலிக்கும் காதல் இசைதான் <em>'மௌனத்தின் பின்னணி இசை'</em>. கண்டிப்பான தந்தை, ஆண்கள் பள்ளியின் கடைசி பெஞ்ச், பத்தாம் வகுப்பு டியூஷன் சென்டரின் 'FLAMES' காகிதம், கல்லூரி நண்பன் ஆதியின் நட்பு எனப் பயணிக்கும் <strong>ருத்ரனின்</strong> வாழ்க்கையில், ராயப்பேட்டை <strong>'முகில் புத்தகப் பதிப்பகத்தின்'</strong> வழியாக வண்ணத்துப்பூச்சியாய் நுழைகிறாள் ஓவியப் பெண் <strong>தியா</strong>.
-            </p>
-            <p>
-              கோவில் புளிசாத டிபன் பாக்ஸ்கள், மெரினா கடற்கரையின் இரு போர்ட் வாக்மேன் பாடல்கள், இட்டாச்சி உச்சிஹா கீசெயின் மற்றும் மழை நாளின் <em>'பக்கம் 96'</em> வழியாக விரியும் இவர்களின் காதல் — ஒரு மனிதரைப் பற்றிய கற்பனை பிம்பத்தைக் காதலிப்பதற்கும், அந்த மனிதரின் பயங்களையும் பலவீனங்களையும் சேர்த்து நிஜமாகக் காதலிப்பதற்கும் இடையிலான அழகான பயணம்!
-            </p>
-            <p style="font-size: 0.9rem; color: #94a3b8;">
-              <strong>English Synopsis:</strong> <em>The Background Score of Silence</em> is a heartwarming Tamil contemporary romance novel about Rudhran, an introverted 90s kid working as a Junior Editor at 'Mugil Book Publishers' in Chennai, and Diya, a spirited freelance book illustrator with bouncy curls and a love for anime and Ilaiyaraaja's melodies.
-            </p>
-          </div>
-
-          <div class="char-grid">
-            <div class="char-card">
-              <div class="char-name">ருத்ரன் (Rudhran)</div>
-              <div class="char-role">Junior Editor • Mugil Publishers</div>
-              <div class="char-desc">தயக்கமும் மௌனமும் கொண்ட 90s கிட்; புத்தகங்களையும் இளையராஜாவின் இசையையும் நேசிப்பவன்.</div>
-            </div>
-            <div class="char-card">
-              <div class="char-name">தியா (Diya)</div>
-              <div class="char-role">Cover Illustrator • Artist</div>
-              <div class="char-desc">சுருள் முடியும், மல்லிகை வாசமும், தூரிகை விரல்களும் கொண்ட துறுதுறு ஓவியப் பெண்.</div>
-            </div>
-          </div>
-
-          <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-            <a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" rel="noopener" class="btn btn-amazon" style="width: auto; padding: 0.9rem 2rem; font-size: 1rem;">
-              🇮🇳 Buy on Amazon.in Kindle (₹149)
-            </a>
-            <a href="https://www.amazon.com/dp/B0HQK6726R" target="_blank" rel="noopener" class="btn btn-outline" style="width: auto; padding: 0.9rem 1.6rem;">
-              🌎 Amazon.com (Global Kindle)
-            </a>
-          </div>
-        </div>
+  <!-- Book 1 Reading Room Section -->
+  <section id="mounathin-pinnani-isai" class="story-section alt-bg">
+    <div class="story-container">
+      <div class="story-header">
+        <div class="story-genre">முதல் நாவல் • காதல் & வாழ்வியல் (Contemporary Romance)</div>
+        <h2 class="story-heading">மௌனத்தின் பின்னணி இசை</h2>
+        <div class="story-subheading">The Background Score of Silence — A Novel by KASI</div>
       </div>
-    </div>
-  </section>
 
-  <!-- Book 2 Full Detail Section (Currently in Writing) -->
-  <section id="book2" class="section section-thriller">
-    <div class="container">
-      <div class="book-detail-grid">
-        <div class="detail-cover-col">
-          <div class="detail-cover-box">
-            <img src="assets/naankaavadhu-nizhal-cover.jpg" alt="நான்காவது நிழல் — The Fourth Shadow Cover" />
-          </div>
-        </div>
+      <div class="novel-pullquote">
+        <p>
+          “ஒரு மனிதரைப் பற்றிய கற்பனை பிம்பத்தைக் காதலிப்பதற்கும், அந்த மனிதரின் பயங்களையும் பலவீனங்களையும் சேர்த்து நிஜமாகக் காதலிப்பதற்கும் இடையில் ஒரு நீண்ட மௌனம் இருக்கிறது. அந்த மௌனத்தின் பின்னணியில் ஒலிக்கும் இசையே இந்தக் கதை.”
+        </p>
+        <cite>— ‘மௌனத்தின் பின்னணி இசை’ நாவலிலிருந்து</cite>
+      </div>
 
-        <div>
-          <span class="rec-badge">● REC 11:42:09 PM // KODAIKANAL HAIRPIN BEND #14</span>
-          <div class="section-eyebrow">Book #02 • Investigative Mystery Thriller-Comedy (Strictly Non-Horror)</div>
-          <h2 class="detail-title">நான்காவது நிழல் (Naankaavadhu Nizhal)</h2>
-          <div class="detail-subtitle">The Fourth Shadow — மூன்று நண்பர்கள்... ஒரு துப்பறியும் த்ரில்லர் காமெடி!</div>
-
-          <!-- Live Writing Status Banner -->
-          <div class="progress-card">
-            <div class="progress-header">
-              <span>✍️ Status: Currently in Writing (எழுத்துப் பணியில் உள்ளது)</span>
-              <span>Chapters 1–3 Completed (11 Chapters Planned)</span>
-            </div>
-            <div class="progress-bar-bg">
-              <div class="progress-bar-fill"></div>
-            </div>
-            <p style="font-size: 0.85rem; color: #cbd5e1;">
-              கூஸ்பம்ப்ஸ் தரும் துப்பறியும் பாணியும் (Forensic Photo & Audio Decoding), வயிறு குலுங்கச் சிரிக்க வைக்கும் மூன்று நண்பர்களின் கொடைக்கானல் சாலைப் பயண கலாட்டாவும் இணைந்த விறுவிறுப்பான நாவல்!
-            </p>
-          </div>
-
-          <div class="synopsis-box" style="border-left-color: #ef4444;">
-            <p>
-              <strong>கதைக்கரு (Plot Synopsis):</strong> வெறும் 1,420 சப்ஸ்கிரைபர்களுடன் தள்ளாடும் <strong>'டிடெக்டிவ் கதிர்' (Detective Kathir)</strong> என்ற யூடியூப் சேனலை நடத்திவரும் மூன்று நெருங்கிய நண்பர்கள் — <strong>கதிர், ரியாஸ், பாலா</strong>. திடீரென அவர்களின் சேனலுக்கு ₹50,000 ஸ்பான்சர் தருவதாக ஒரு மர்ம ஈமெயில் வருகிறது. நிபந்தனை ஒன்றுதான்: 1999-ஆம் ஆண்டு நவம்பர் 14 அன்று இரவு சரியாக <strong>11:42 மணிக்கு</strong> கொடைக்கானலின் 14-வது கொண்டைஊசி வளைவில் காணாமல் போன 'ஆர்தர் ராஜ்' மற்றும் பழைய பிரிட்டிஷ் கடிகார கோபுரத்தைப் பற்றி ஒரு வீடியோ எடுக்க வேண்டும்!
-            </p>
-            <p>
-              பயணத்திற்கு முன்பு ராயப்பேட்டை <strong>'முகில் புத்தகப் பதிப்பகத்தில்'</strong> (நமது முதல் புத்தகத்தின் <strong>ருத்ரன் & தியா</strong> சிறப்பு கெஸ்ட் தோற்றத்தில்!) பழைய புத்தகத்தையும் தியாவின் புளிசாத பார்சலையும் வாங்கிக்கொண்டு, பாலாவின் கறுப்பு நிற <strong>Mahindra Thar Roxx</strong> காரில் கொடைக்கானல் புறப்படுகிறார்கள்.
-            </p>
-            <p>
-              இரவு 11:42 மணிக்கு பனிமூட்டத்தில் 14-வது வளைவில் ரியாஸ் எடுத்த 4K டிரோன் வீடியோவை ஜூம் செய்து பார்க்கும்போது உறைய வைக்கும் அதிர்ச்சி காத்திருக்கிறது — காரின் ஹெட்லைட் வெளிச்சத்தில் கதிர், ரியாஸ், பாலா மூவரின் நிழல்களோடு... பைன் மரங்களுக்குப் பின்னால் <strong>நான்காவதாக ஒரு நிழல் (நான்காவது நிழல்)</strong> நிற்கிறது!
-            </p>
-          </div>
-
-          <!-- 3 Friends Character Cards -->
-          <div class="char-grid">
-            <div class="char-card">
-              <div class="char-name">கதிர் (Kathir)</div>
-              <div class="char-role">The 'Decode' Voiceover Detective</div>
-              <div class="char-desc">மைக் பிடித்தால் ஷெர்லாக் ஹோம்ஸ்; நிஜத்தில் இருட்டையும் கொண்டைஊசி வளைவுகளையும் பார்த்தால் அலறுபவன்.</div>
-            </div>
-            <div class="char-card">
-              <div class="char-name">ரியாஸ் (Riyaz)</div>
-              <div class="char-role">4K Drone & Clickbait Specialist</div>
-              <div class="char-desc">உயிரே போகும் ஆபத்திலும் "மச்சான், லைட்டிங் சூப்பரா இருக்கு, தம்ப்நெயில் எடுத்தர்றேன்!" என்பவன்.</div>
-            </div>
-            <div class="char-card">
-              <div class="char-name">பாலா (Bala)</div>
-              <div class="char-role">Thar Roxx Driver & Foodie</div>
-              <div class="char-desc">கறுப்பு நிற மஹிந்திரா தார் ராக்ஸின் பெருமைமிகு டிரைவர், புளிசாதப் பிரியன் மற்றும் கவுண்ட்டர் மன்னன்.</div>
-            </div>
-          </div>
-
-          <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-            <button onclick="openModal()" class="btn btn-amazon" style="width: auto; padding: 0.9rem 2rem;">
-              🔍 முதல் அத்தியாயம் முன்னோட்டம் (Read Chapter 1 Teaser)
+      <div class="story-columns">
+        <div class="story-prose">
+          <p class="dropcap">
+            1990-களில் பிறந்து வளர்ந்த ஒரு சராசரி சென்னை இளைஞனின் தயக்கங்களும் கனவுகளும் நிறைந்த உலகம் இது. கண்டிப்பான தந்தை, ஆண்கள் பள்ளியின் கடைசி பெஞ்ச், பத்தாம் வகுப்பு டியூஷன் சென்டரின் 'FLAMES' காகிதம், கல்லூரி நண்பன் ஆதியின் கலகலப்பான நட்பு எனப் பயணிக்கும் <strong>ருத்ரனின்</strong> வாழ்க்கையில், ராயப்பேட்டை <strong>'முகில் புத்தகப் பதிப்பகத்தின்'</strong> வழியாகத் தென்றலாய் நுழைகிறாள் ஓவியப் பெண் <strong>தியா</strong>.
+          </p>
+          <p>
+            இரண்டு அடுக்கு சில்வர் டிபன் பாக்ஸ் புளிசாதம், மெரினா கடற்கரை மணலில் அமர்ந்து இரு போர்ட் கொண்ட வாக்மேனில் (Dual-Port Walkman) பகிர்ந்து கேட்கும் இளையராஜாவின் பாடல்கள், நருட்டோ அனிமேயின் 'இட்டாச்சி உச்சிஹா' கீசெயின் என அழகாக மலரும் இவர்களின் நட்பு, ஒரு மழை நாளில் புத்தகத்தின் <strong>'பக்கம் 96'</strong>-ல் காதலாகப் பூக்கிறது.
+          </p>
+          <p>
+            ஆனால், தாழ்வு மனப்பான்மையும் எதிர்பாராத பிரிவும் அவர்களைத் தனித்தனித் தீவுகளாய் மாற்றும்போது, அந்த மௌனத்தை உடைத்து இருவரும் எப்படி மீண்டும் இணைகிறார்கள் என்பதே 11 ஓவியங்களுடன் கூடிய இந்த நாவல்.
+          </p>
+          <div style="margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+            <a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" rel="noopener" class="btn-primary">
+              📚 Amazon Kindle-ல் முழு புத்தகத்தையும் வாசிக்க →
+            </a>
+            <button onclick="openReader('book1', 0)" class="btn-secondary">
+              📖 மாதிரிப் பக்கங்களைப் புரட்ட (Flip Pages)
             </button>
           </div>
         </div>
+
+        <div class="bookmark-panel">
+          <div class="bookmark-title">🔖 கதையின் முக்கிய மாந்தர்கள்</div>
+          <div class="character-item">
+            <strong>ருத்ரன் (Rudhran)</strong>
+            <span>'முகில் புத்தகப் பதிப்பகத்தின்' இளம் உதவி ஆசிரியர். தன் மனதிற்குள் ஆயிரம் வார்த்தைகளைச் சுமந்தாலும், நேரில் பேசத் தயங்கும் 90s கிட்.</span>
+          </div>
+          <div class="character-item">
+            <strong>தியா (Diya)</strong>
+            <span>சுருள் முடியும், மல்லிகை வாசமும், தூரிகை விரல்களும் கொண்ட புத்தக அட்டைப்பட ஓவியர். ருத்ரனின் மௌனத்தை இசையாக மாற்றுபவள்.</span>
+          </div>
+          <div class="character-item">
+            <strong>ஆதி (Aadhi)</strong>
+            <span>ருத்ரனின் கல்லூரித் தோழன்; காதலிலும் வாழ்க்கையிலும் ருத்ரனுக்குத் தோள் கொடுக்கும் உற்ற நண்பன்.</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- About the Author Section -->
-  <section id="author" class="author-section">
-    <div class="author-box">
-      <div class="section-eyebrow">About the Author</div>
-      <h2 class="detail-title" style="font-size: 2rem; margin-bottom: 1rem;">காசிராமன் காமராஜ் (KASI)</h2>
-      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-        எழுத்தாளர் <strong>காசிராமன் காமராஜ் (KASI)</strong>, வாசகர்களின் மனதிற்கு நெருக்கமான உணர்வுகளையும், காட்சிரீதியான சினிமா விறுவிறுப்பையும் தமிழ் நாவல்களில் கொண்டுவருபவர். அவரது முதல் நாவலான <strong>'மௌனத்தின் பின்னணி இசை'</strong> அமேசான் கிண்டிலில் வெளியாகி வாசகர்களிடையே வரவேற்பைப் பெற்றுள்ளது. தற்போது தனது இரண்டாவது படைப்பான <strong>'நான்காவது நிழல்'</strong> (கொடைக்கானல் துப்பறியும் த்ரில்லர்-காமெடி நாவல்) எழுத்துப் பணியில் ஈடுபட்டு வருகிறார்.
+  <!-- Book 2 Reading Room Section (Currently in Writing) -->
+  <section id="naankaavadhu-nizhal" class="story-section">
+    <div class="story-container">
+      <div class="story-header">
+        <div class="story-genre" style="color: var(--accent-teal);">இரண்டாவது நாவல் • தற்போது எழுத்துப் பணியில் உள்ளது (In Writing)</div>
+        <h2 class="story-heading">நான்காவது நிழல்</h2>
+        <div class="story-subheading">The Fourth Shadow — A Kodaikanal Mystery Thriller-Comedy</div>
+      </div>
+
+      <div class="novel-pullquote" style="border-left-color: var(--accent-teal);">
+        <p>
+          “நாளை இரவு 11:42 மணிக்குக் கொடைக்கானலின் பதினான்காவது கொண்டைஊசி வளைவில் நீங்கள் மூவர் மட்டும் இருக்க மாட்டீர்கள்... ஈரமான தார்ச்சாலையில் விழும் உங்கள் நிழல்களை ஒருமுறை எண்ணிக்கொள்ளுங்கள்!”
+        </p>
+        <cite>— ‘நான்காவது நிழல்’ நாவலின் முதல் அத்தியாயத்திலிருந்து (தற்போது எழுதப்பட்டு வருகிறது)</cite>
+      </div>
+
+      <div class="story-columns">
+        <div class="story-prose">
+          <p class="dropcap">
+            வெறும் ஆயிரத்து நானூறு சப்ஸ்கிரைபர்களுடன் தள்ளாடும் <strong>'டிடெக்டிவ் கதிர்' (Detective Kathir)</strong> என்ற யூடியூப் சேனலை நடத்திவரும் மூன்று பக்கத்து வீட்டு நண்பர்கள் — <strong>கதிர், ரியாஸ் மற்றும் பாலா</strong>. ஒரு நாள் அவர்களின் சேனலுக்கு ஐம்பதாயிரம் ரூபாய் ஸ்பான்சர் தருவதாக ஒரு மர்ம ஈமெயில் வருகிறது.
+          </p>
+          <p>
+            1999-ஆம் ஆண்டு நவம்பர் 14-ஆம் தேதி இரவு சரியாக <strong>11:42 மணிக்கு</strong>, கொடைக்கானலின் 14-வது கொண்டைஊசி வளைவில் காணாமல் போன தாவரவியல் ஆராய்ச்சியாளர் ஆர்தர் ராஜ் பற்றியும், இருபத்தைந்து ஆண்டுகளாக ஓடாத பிரிட்டிஷ் கடிகார கோபுரத்தைப் பற்றியும் ஒரு துப்பறியும் வீடியோ எடுக்க வேண்டும் என்பதே நிபந்தனை!
+          </p>
+          <p>
+            பயணத்திற்கு முன்பு ராயப்பேட்டை <strong>'முகில் புத்தகப் பதிப்பகத்திற்கு'</strong>ச் சென்று (அங்கே நமது முதல் புத்தகத்தின் <strong>ருத்ரன் மற்றும் தியா</strong> சிறப்புத் தோற்றத்தில் தியா தன் கையால் செய்த புளிசாதத்தை பார்சல் கட்டிக் கொடுக்க!), பாலாவின் கறுப்பு நிற <strong>Mahindra Thar Roxx</strong> காரில் கொடைக்கானல் மலைப்பாதையில் ஏறுகிறார்கள். நள்ளிரவு 11:42 மணிக்கு ரியாஸ் பறக்கவிட்ட டிரோன் கேமராவில், மூவரின் நிழல்களுக்குப் பக்கத்தில் <strong>நான்காவதாக ஒரு மர்ம நிழல்</strong> பதிவாகிறது!
+          </p>
+          <div style="margin-top: 1.75rem;">
+            <button onclick="openReader('book2', 0)" class="btn-primary" style="background: var(--accent-teal);">
+              📖 முதல் 3 அத்தியாயங்களின் மாதிரிப் பக்கங்களைப் படிக்க (Read Sample Pages)
+            </button>
+          </div>
+        </div>
+
+        <div class="bookmark-panel">
+          <div class="bookmark-title">🚙 பயணத்தின் மூன்று நண்பர்கள்</div>
+          <div class="character-item">
+            <strong>கதிர் (Kathir)</strong>
+            <span>'டிடெக்டிவ் கதிர்' சேனலின் குரல். மைக் பிடித்தால் ஷெர்லாக் ஹோம்ஸ்; நிஜத்தில் இருட்டையும் கொண்டைஊசி வளைவுகளையும் பார்த்தால் அலறுபவன்.</span>
+          </div>
+          <div class="character-item">
+            <strong>ரியாஸ் (Riyaz)</strong>
+            <span>4K டிரோன் கேமராமேன் & தம்ப்நெயில் மன்னன். ஆபத்தான நேரத்திலும் "மச்சான், லைட்டிங் சூப்பரா இருக்கு!" என்று கேமரா தூக்குபவன்.</span>
+          </div>
+          <div class="character-item">
+            <strong>பாலா (Bala)</strong>
+            <span>கறுப்பு நிற மஹிந்திரா தார் ராக்ஸின் பெருமைமிகு டிரைவர், புளிசாதப் பிரியன் மற்றும் கதிரின் பில்டப்புகளை உடைக்கும் கவுண்ட்டர் மன்னன்.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- From the Author's Desk -->
+  <section id="author-note" class="story-section alt-bg">
+    <div class="author-letter">
+      <div class="ornament">❦</div>
+      <h2 class="story-heading" style="font-size: 1.85rem; margin-bottom: 1rem;">எழுத்தாளரின் மேஜையிலிருந்து...</h2>
+      <p style="color: var(--ink-body); font-size: 1.02rem; margin-bottom: 1rem;">
+        அன்புள்ள வாசகர்களுக்கு, நமக்குள் சொல்லப்படாமல் போன வார்த்தைகளையும், கடந்து வந்த 90-களின் அழகான நினைவுகளையும் அசைபோடும் ஒரு முயற்சியே எனது முதல் நாவலான <strong>‘மௌனத்தின் பின்னணி இசை’</strong>. தற்போது அமேசான் கிண்டிலில் வெளியாகியுள்ள இந்நாவலை வாசித்து உங்கள் கருத்துக்களைப் பகிர்ந்துகொள்ள வேண்டுகிறேன்.
       </p>
-      <a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" rel="noopener" class="btn btn-outline" style="width: auto;">
-        Visit KASI's Amazon Kindle Storefront →
-      </a>
+      <p style="color: var(--ink-body); font-size: 1.02rem;">
+        அடுத்ததாக, மூன்று நண்பர்களின் கலகலப்பான பயணத்தையும், கொடைக்கானல் பனிமூட்டத்தின் பின்னால் இருக்கும் ஒரு விறுவிறுப்பான மர்மத்தையும் இணைத்து <strong>‘நான்காவது நிழல்’ (The Fourth Shadow)</strong> நாவலை எழுதி வருகிறேன். விரைவில் அப்புத்தகமும் உங்கள் கைகளில் தவழும்!
+      </p>
+      <div class="signature">— காசிராமன் (KASI)</div>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Kasiraman Kamaraj (KASI). All Rights Reserved.</p>
+    <p>© 2026 Kasiraman Kamaraj (KASI) • வாசகர்களுக்காக அன்புடன் உருவாக்கப்பட்டது.</p>
   </footer>
 
-  <!-- Chapter 1 Sneak Peek Modal for Book 2 -->
-  <div id="teaserModal" class="modal-overlay" onclick="if(event.target===this) closeModal()">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal()">✕</button>
-      <div class="rec-badge">● SNEAK PEEK — CURRENTLY IN WRITING</div>
-      <h3 style="font-family: 'Noto Serif Tamil', serif; font-size: 1.6rem; color: #fff; margin-bottom: 1rem;">
-        நான்காவது நிழல் — அத்தியாயம் 1: வியூஸ் வாங்காத வீடியோவும், ராயப்பேட்டை புளிசாதமும்!
-      </h3>
-      <div style="color: #e2e8f0; font-size: 0.96rem; line-height: 1.85; space-y: 1rem;">
-        <p style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 10px; font-style: italic; margin-bottom: 1rem;">
-          "வணக்கம் மக்களே... வெல்கம் பேக் டூ 'டிடெக்டிவ் கதிர்'. இப்போது நீங்கள் திரையில் பார்த்துக்கொண்டிருக்கும் இந்தக் கறுப்பு-வெள்ளைப் புகைப்படம், 1999-ஆம் ஆண்டு நவம்பர் மாதம் 14-ஆம் தேதி, கொடைக்கானலின் பதினான்காவது கொண்டைஊசி வளைவில் சரியாக இரவு 11 மணி 42 நிமிடத்திற்கு எடுக்கப்பட்டது. இந்தப் புகைப்படத்தின் இடது மேல் ஓரத்தை நாம் முன்னூறு சதவீதம் ஜூம் செய்து பார்த்தபோதுதான்..."
-        </p>
-        <p style="margin-bottom: 1rem;">
-          "டேய் கதிரு! நிறுத்துடா! அந்தப் போட்டோவுல பைன் மரத்துக்குப் பின்னாலத் தெரியுறது மர்ம உருவமும் இல்ல, க்ரைம் சீனும் இல்ல... நேத்து நைட்டு ரியாஸ் பிரியாணி தின்னுட்டுக் கையைத் துடைக்காம மானிட்டரைத் தொட்ட எண்ணெய் கறைடா அது!" — கடக்-முடக் என்று முறுக்கைக் கடிக்கும் சத்தத்தோடு அறைக் கதவைத் தள்ளிக்கொண்டு உள்ளே வந்தான் பாலா.
-        </p>
-        <p style="margin-bottom: 1rem;">
-          ...ராயப்பேட்டை <strong>'முகில் புத்தகப் பதிப்பகம்'</strong> வாசலில் பாலாவின் கறுப்பு நிற <strong>Mahindra Thar Roxx</strong> நின்றது. உள்ளே மர மேஜைக்குப் பின்னால் <strong>ருத்ரன்</strong> பழைய கையெழுத்துப் பிரதிகளை அடுக்கிக்கொண்டிருக்க, அருகில் <strong>தியா</strong> இரண்டு அடுக்கு சில்வர் டிபன் பாக்ஸைத் திறந்து வைத்துக்கொண்டிருந்தாள்.
-        </p>
-        <p style="margin-bottom: 1rem;">
-          மேஜை மீது இருக்கும் இரண்டு அடுக்கு சில்வர் டிபன் பாக்ஸ் புளிசாதத்தின் வாசனையை மோப்பம் பிடிக்கும் பாலா, <em>"அண்ணே, புத்தகமெல்லாம் அப்புறம் இருக்கட்டும், இந்தப் புளிசாதம் எந்தக் கோவில் பிரசாதம்னு மட்டும் சொல்லுங்க!"</em> என்று கேட்க, தியா சிரித்துக்கொண்டே அவர்கள் கொடைக்கானல் பயணத்திற்குத் தன் கையால் செய்த புளிசாதத்தை பார்சல் கட்டிக் கொடுக்கிறாள்! மேஜை மீது இருக்கும் <strong>'இட்டாச்சி உச்சிஹா' (Itachi Uchiha)</strong> கீசெயினைப் பார்த்து ரியாஸ் வியக்கிறான்...
-        </p>
-        <p style="color: var(--gold); font-weight: 700; margin-top: 1.25rem;">
-          ✨ முழு நாவலும் விரைவில் அமேசான் கிண்டில் மற்றும் அச்சுப் புத்தகமாக வெளியாகும்! அதுவரை 'மௌனத்தின் பின்னணி இசை' நாவலை அமேசானில் வாசியுங்கள்!
-        </p>
+  <!-- Interactive Open-Book Page Reader Modal -->
+  <div id="readerModal" class="book-reader-modal" onclick="if(event.target===this) closeReader()">
+    <div class="open-book-spread">
+      <div class="open-book-topbar">
+        <span id="readerBookTitle">புத்தக முன்னோட்டம்</span>
+        <button class="close-reader-btn" onclick="closeReader()">✕ மூடுக (Close Book)</button>
+      </div>
+      <div id="readerPageContent" class="open-book-page"></div>
+      <div class="open-book-footer">
+        <button id="prevPageBtn" class="page-nav-btn" onclick="changePage(-1)">◀ முந்தைய பக்கம்</button>
+        <span id="pageIndicator" style="font-weight: 600; color: var(--ink-muted);">பக்கம் 1 / 3</span>
+        <button id="nextPageBtn" class="page-nav-btn" onclick="changePage(1)">அடுத்த பக்கம் ▶</button>
       </div>
     </div>
   </div>
 
   <script>
-    function openModal() {
-      document.getElementById('teaserModal').classList.add('active');
+    const samplePages = {
+      book1: {
+        title: "மௌனத்தின் பின்னணி இசை — மாதிரிப் பக்கங்கள்",
+        pages: [
+          `<h3>அத்தியாயம் 1: மௌனத்தின் முதல் சுரம்</h3>
+           <p>சில மனிதர்களின் வாழ்க்கை ஒரு திறந்த புத்தகத்தைப் போல இருக்கும். யார் வேண்டுமானாலும் எப்போது வேண்டுமானாலும் எந்தப் பக்கத்தையும் புரட்டிப் படித்துவிடலாம். ஆனால் ருத்ரனின் வாழ்க்கை அப்படிப்பட்டதல்ல; நூலகத்தின் கடைசி வரிசையில், யாருடைய கண்ணிலும் படாமல் தூசி படிந்து கிடக்கும் ஒரு பழைய கையெழுத்துப் பிரதியைப் போன்றது அவனது மனது.</p>
+           <p>1990-களின் இறுதியில் சென்னையின் ஒரு நடுத்தரக் குடும்பத்தில் வளர்ந்தவர்களுக்குக் காதல் என்பது சினிமா தியேட்டர் இருட்டிலும், இளையராஜாவின் கேசட் நாடாக்களிலும் மட்டுமே அறிமுகமான ஒரு ரகசிய மொழி. கண்டிப்பான தந்தையின் காலடிச் சத்தம் கேட்டாலே பாடம் படிப்பது போலப் பாவனை செய்யும் சிறுவனாகத்தான் ருத்ரன் வளர்ந்தான்.</p>
+           <p>ஆனால் அவனுடைய உலகத்திற்குள் வண்ணங்களையும் மல்லிகை வாசனையையும் சுமந்துகொண்டு தியா நுழைந்த அந்த ராயப்பேட்டை மழை நாளை அவனால் வாழ்நாளில் மறக்கவே முடியாது...</p>`,
+          `<h3>முகில் புத்தகப் பதிப்பகமும், புளிசாத வாசனையும்</h3>
+           <p>ராயப்பேட்டை 'முகில் புத்தகப் பதிப்பகத்தின்' மரப் படிக்கட்டுகளில் ஏறும்போதெல்லாம் ருத்ரனுக்குப் பழைய காகிதங்களின் வாசனை ஒருவித ஆறுதலைத் தரும். அன்று மதியம் அவனது மேஜைக்கு எதிரே, சுருள் முடியை அள்ளி முடிந்து, காதில் ஆடும் வெள்ளி ஜிமிக்கியோடு புத்தக அட்டைப்படத்திற்கு வண்ணம் தீட்டிக்கொண்டிருந்தாள் தியா.</p>
+           <p>தன் பையிலிருந்து இரண்டு அடுக்கு சில்வர் டிபன் பாக்ஸைத் திறந்து அவள் நீட்டிய கோவில் புளிசாதத்தின் சுவையும், மெரினா கடற்கரைக் காற்றில் அவனது வாக்மேனின் இரண்டாவது போர்ட்டில் தன் ஹெட்போனை மாட்டிக்கொண்டு அவள் கேட்ட முதல் பாடலும் — ருத்ரனின் நீண்ட கால மௌனத்திற்குப் புதிய பின்னணி இசையை எழுதத் தொடங்கின.</p>
+           <p style="text-align:center; margin-top:1.5rem;"><a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" class="btn-primary" style="text-decoration:none;">📚 முழு நாவலையும் Amazon Kindle-ல் வாசிக்க இங்கே க்ளிக் செய்யவும் →</a></p>`
+        ]
+      },
+      book2: {
+        title: "நான்காவது நிழல் (எழுத்துப் பணியில்) — முதல் 3 அத்தியாயங்களின் முன்னோட்டம்",
+        pages: [
+          `<h3>அத்தியாயம் 1: வியூஸ் வாங்காத வீடியோவும், ராயப்பேட்டை புளிசாதமும்!</h3>
+           <p><em>"வணக்கம் மக்களே... வெல்கம் பேக் டூ 'டிடெக்டிவ் கதிர்'. இப்போது நீங்கள் திரையில் பார்த்துக்கொண்டிருக்கும் இந்தக் கறுப்பு-வெள்ளைப் புகைப்படம், 1999-ஆம் ஆண்டு நவம்பர் மாதம் 14-ஆம் தேதி, கொடைக்கானலின் பதினான்காவது கொண்டைஊசி வளைவில் சரியாக இரவு 11 மணி 42 நிமிடத்திற்கு எடுக்கப்பட்டது. இந்தப் புகைப்படத்தின் இடது மேல் ஓரத்தை நாம் முன்னூறு சதவீதம் ஜூம் செய்து பார்த்தபோதுதான்..."</em></p>
+           <p>"டேய் கதிரு! நிறுத்துடா! அந்தப் போட்டோவுல பைன் மரத்துக்குப் பின்னாலத் தெரியுறது மர்ம உருவமும் இல்ல, க்ரைம் சீனும் இல்ல... நேத்து நைட்டு ரியாஸ் பிரியாணி தின்னுட்டுக் கையைத் துடைக்காம மானிட்டரைத் தொட்ட எண்ணெய் கறைடா அது!" — கடக்-முடக் என்று முறுக்கைக் கடிக்கும் சத்தத்தோடு அறைக் கதவைத் தள்ளிக்கொண்டு உள்ளே வந்தான் பாலா.</p>
+           <p>வெறும் 1,420 சப்ஸ்கிரைபர்களுடன் தள்ளாடும் அவர்களின் சேனலுக்கு அன்று வந்த அந்த மர்ம ஈமெயில், கொடைக்கானலின் 'கடிகார கோபுர மர்மத்தை' படம் பிடிக்க ₹50,000 ஸ்பான்சர் தருவதாகக் கூறியது! புறப்படும் முன் ராயப்பேட்டை 'முகில் புத்தகப் பதிப்பகத்திற்கு'ச் சென்ற மூவருக்கும், ருத்ரன் பழைய 1998-ஆம் ஆண்டுப் புத்தகத்தை எடுத்துத் தர, மேஜை மீது இருந்த இரண்டு அடுக்கு சில்வர் டிபன் பாக்ஸ் புளிசாதத்தின் வாசனையை மோப்பம் பிடித்த பாலா, "அண்ணே, புத்தகமெல்லாம் அப்புறம் இருக்கட்டும், இந்தப் புளிசாதம் எந்தக் கோவில் பிரசாதம்னு மட்டும் சொல்லுங்க!" என்று கேட்டான். தியா சிரித்துக்கொண்டே அவர்கள் கொடைக்கானல் பயணத்திற்குத் தன் கையால் செய்த புளிசாதத்தை பார்சல் கட்டிக் கொடுத்தாள்! மேஜை மீது இருந்த 'இட்டாச்சி உச்சிஹா' (Itachi Uchiha) கீசெயினைப் பார்த்து ரியாஸ் வியந்தான்.</p>`,
+          `<h3>அத்தியாயம் 2: 14-வது கொண்டைஊசி வளைவும், நள்ளிரவு 11:42-ம்!</h3>
+           <p>"பாலா! மெதுவாத் திருப்புடா! இது கொண்டைஊசி வளைவு இல்லடா, எமதர்மனோட மீசை வளைவு!" என்று கறுப்பு நிற மஹிந்திரா தார் ராக்ஸ் (Mahindra Thar Roxx) காரின் கைப்பிடியை இறுக்கிப் பிடித்துக்கொண்டு அலறினான் கதிர்.</p>
+           <p>இரவு 11:25 மணி. கொடைக்கானல் மலைப்பாதையே மயான அமைதியில் உறைந்திருந்தது. சரியாக 14-வது கொண்டைஊசி வளைவின் ஓரத்தில் பாலா தனது தார் ராக்ஸ் காரை நிறுத்தினான். சாலையிலிருந்து சற்று உயரத்தில், பைன் மரக் குன்றுக்கு மேலே, இருபத்தைந்து ஆண்டுகளாக ஓடாமல் கிடந்த அந்தப் பழைய பிரிட்டிஷ் கடிகார கோபுரத்தில் சரியாக இரவு 11:42 மணிக்கு மஞ்சள் விளக்கு மங்கலாக எரிந்தது!</p>
+           <p>பாலா கார் பானெட் மீது சாய்ந்து நிற்க, ரியாஸ் தன் 4K டிரோனைப் பறக்கவிட்டுக் கையில் கிம்பல் கேமராவைப் பிடிக்க, கதிர் டார்ச் லைட்டை பைன் மரக்காட்டிற்குள் அடித்த நொடி — 'கணீர்!' என்று ஏதோ ஒரு உலோகப் பெட்டி பாறையில் உரசும் சத்தம் கேட்டது!</p>`,
+          `<h3>அத்தியாயம் 3: நான்காவது நிழல்!</h3>
+           <p>காட்டேஜுக்குத் திரும்பி கதவைத் தாழ்ப்பாள் போட்ட பிறகு, ரியாஸ் டிரோன் மெமரி கார்டை லேப்டாப்பில் சொருகினான். பாலா சுடச்சுட மேகி கிண்ணத்தோடு வந்து நின்றான். சரியாக 11:42:09-வது வினாடியில் வீடியோவை 'பாஸ்' (Pause) செய்து 200% ஜூம் செய்தபோது, மூவரின் இதயத் துடிப்பும் ஒரு நொடி நின்று போனது.</p>
+           <p>கதிர் அடித்த டார்ச் வெளிச்சத்தின் விளிம்பில், ஈரமான தார்ச்சாலையில் பாலா, ரியாஸ், கதிர் ஆகிய மூவரின் நிழல்களுக்குப் பக்கத்திலேயே... பைன் மரங்களுக்குப் பின்னால் கறுப்பு ஹூடி அணிந்த நான்காவது உருவத்தின் நிழலும் ('நான்காவது நிழல்') நீண்டு விழுந்திருந்தது! அதன் இடது கையில், 25 வருடங்களுக்கு முன்பு ஆர்தர் ராஜோடு காணாமல் போன அதே வெள்ளி ஆவணப் பெட்டி மின்னியது!</p>
+           <p style="color: var(--accent-teal); font-weight: 700; text-align: center; margin-top: 1.5rem;">✍️ 'நான்காவது நிழல்' நாவலின் அடுத்தடுத்த அத்தியாயங்கள் தற்போது விறுவிறுப்பாக எழுதப்பட்டு வருகின்றன — விரைவில் முழு புத்தகமாக வெளியாகும்!</p>`
+        ]
+      }
+    };
+
+    let currentBook = 'book1';
+    let currentPage = 0;
+
+    function openReader(bookKey, pageIdx) {
+      currentBook = bookKey;
+      currentPage = pageIdx;
+      renderReaderPage();
+      document.getElementById('readerModal').classList.add('active');
     }
-    function closeModal() {
-      document.getElementById('teaserModal').classList.remove('active');
+
+    function closeReader() {
+      document.getElementById('readerModal').classList.remove('active');
+    }
+
+    function changePage(delta) {
+      const pages = samplePages[currentBook].pages;
+      const next = currentPage + delta;
+      if (next >= 0 && next < pages.length) {
+        currentPage = next;
+        renderReaderPage();
+      }
+    }
+
+    function renderReaderPage() {
+      const book = samplePages[currentBook];
+      document.getElementById('readerBookTitle').textContent = book.title;
+      document.getElementById('readerPageContent').innerHTML = book.pages[currentPage];
+      document.getElementById('pageIndicator').textContent = `பக்கம் ${currentPage + 1} / ${book.pages.length}`;
+      document.getElementById('prevPageBtn').disabled = (currentPage === 0);
+      document.getElementById('nextPageBtn').disabled = (currentPage === book.pages.length - 1);
+      document.getElementById('readerPageContent').scrollTop = 0;
     }
   </script>
 </body>
