@@ -42,60 +42,107 @@
       overflow-x: hidden;
     }
 
-    /* Warm Literary Header */
+    /* Warm Literary Header & Collapsible Mobile Nav */
     header {
-      background: rgba(250, 246, 240, 0.94);
-      backdrop-filter: blur(10px);
+      background: rgba(250, 246, 240, 0.96);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-soft);
       position: sticky;
       top: 0;
-      z-index: 90;
+      z-index: 100;
+      box-shadow: 0 2px 14px rgba(58, 42, 33, 0.04);
     }
 
     .nav-wrap {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 1.1rem 1.5rem;
+      padding: 0.9rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 1rem;
+      position: relative;
     }
 
     .author-brand {
       text-decoration: none;
       color: var(--ink-dark);
       display: flex;
-      align-items: baseline;
+      align-items: center;
       gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .author-monogram {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--accent-burgundy);
+      color: #FFFDF9;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      box-shadow: 0 3px 10px rgba(140, 58, 50, 0.22);
+    }
+
+    .author-brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
     }
 
     .author-brand-name {
       font-family: 'Cormorant Garamond', 'Noto Serif Tamil', serif;
-      font-size: 1.65rem;
+      font-size: 1.35rem;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 1.8px;
       color: var(--ink-dark);
     }
 
     .author-brand-ta {
-      font-family: 'Noto Serif Tamil', serif;
-      font-size: 0.95rem;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.78rem;
       color: var(--ink-muted);
       font-weight: 500;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: var(--paper-card);
+      border: 1px solid var(--border-soft);
+      color: var(--ink-dark);
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.25rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .nav-toggle:hover {
+      background: var(--paper-warm);
+      border-color: var(--accent-gold);
     }
 
     .nav-menu {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .nav-menu a {
       text-decoration: none;
       color: var(--ink-body);
       font-family: 'Noto Sans Tamil', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 500;
+      font-size: 0.9rem;
+      font-weight: 600;
+      white-space: nowrap;
       transition: color 0.2s;
     }
 
@@ -106,9 +153,9 @@
     .nav-kindle-btn {
       background: var(--accent-burgundy);
       color: #fff !important;
-      padding: 0.55rem 1.25rem;
+      padding: 0.52rem 1.15rem;
       border-radius: 99px;
-      font-size: 0.86rem !important;
+      font-size: 0.85rem !important;
       font-weight: 600 !important;
       box-shadow: 0 4px 12px rgba(140, 58, 50, 0.22);
       transition: transform 0.2s, background 0.2s !important;
@@ -119,35 +166,124 @@
       transform: translateY(-1px);
     }
 
-    /* Literary Hero Intro */
-    .hero-literary {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 4.5rem 1.5rem 3rem;
-      text-align: center;
+    /* Mobile Collapsible Navigation Drawer */
+    @media (max-width: 880px) {
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.35rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--paper-card);
+        border-bottom: 1px solid var(--border-soft);
+        box-shadow: 0 14px 28px rgba(35, 27, 24, 0.1);
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.32s ease, opacity 0.25s ease, padding 0.25s ease;
+      }
+
+      .nav-menu.open {
+        max-height: 340px;
+        opacity: 1;
+        padding: 1rem 1.5rem 1.25rem;
+        pointer-events: auto;
+      }
+
+      .nav-menu a {
+        padding: 0.7rem 0.85rem;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        border-bottom: 1px solid #F3ECE1;
+      }
+
+      .nav-menu a:hover {
+        background: var(--paper-warm);
+      }
+
+      .nav-menu .nav-kindle-btn {
+        margin-top: 0.45rem;
+        text-align: center;
+        border-bottom: none;
+        padding: 0.72rem 1.15rem;
+      }
     }
 
-    .ornament {
-      color: var(--accent-gold);
-      font-size: 1.35rem;
-      letter-spacing: 8px;
-      margin-bottom: 1rem;
+    /* Literary Hero Intro */
+    .hero-literary {
+      max-width: 1120px;
+      margin: 1.75rem auto 2.25rem;
+      padding: 0 1.5rem;
+    }
+
+    .hero-banner-card {
+      background: linear-gradient(180deg, #FFFDF9 0%, #F6EFE4 100%);
+      border: 1px solid var(--border-soft);
+      border-radius: 22px;
+      padding: 2.75rem 2rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(58, 42, 33, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: #FDF2EF;
+      color: var(--accent-burgundy);
+      border: 1px solid #F3D1C8;
+      padding: 0.35rem 1rem;
+      border-radius: 99px;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.1rem;
     }
 
     .hero-quote {
       font-family: 'Noto Serif Tamil', serif;
-      font-size: clamp(1.55rem, 3.2vw, 2.35rem);
+      font-size: clamp(1.35rem, 2.7vw, 2.05rem);
       font-weight: 700;
       color: var(--ink-dark);
-      line-height: 1.45;
-      margin-bottom: 1.15rem;
+      line-height: 1.55;
+      max-width: 820px;
+      margin: 0 auto 1rem;
     }
 
     .hero-subtext {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--ink-muted);
-      max-width: 680px;
+      max-width: 660px;
       margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 640px) {
+      .hero-literary {
+        margin: 1.1rem auto 1.5rem;
+        padding: 0 1rem;
+      }
+      .hero-banner-card {
+        padding: 1.85rem 1.25rem;
+        border-radius: 16px;
+      }
+      .hero-quote {
+        font-size: 1.22rem;
+      }
+      .hero-subtext {
+        font-size: 0.92rem;
+      }
     }
 
     /* 3D Physical Book Showcase */
@@ -413,9 +549,6 @@
       .story-columns {
         grid-template-columns: 1fr;
       }
-      .nav-menu {
-        display: none;
-      }
     }
 
     .story-prose p {
@@ -628,31 +761,41 @@
 </head>
 <body>
 
-  <!-- Cozy Bookstore Navigation -->
+  <!-- Cozy Bookstore Navigation (Desktop + Collapsible Mobile Drawer) -->
   <header>
     <div class="nav-wrap">
       <a href="#" class="author-brand">
-        <span class="author-brand-name">KASI</span>
-        <span class="author-brand-ta">எழுத்தாளர் காசிராமன்</span>
+        <span class="author-monogram">K</span>
+        <span class="author-brand-text">
+          <span class="author-brand-name">KASI</span>
+          <span class="author-brand-ta">எழுத்தாளர் காசிராமன்</span>
+        </span>
       </a>
-      <nav class="nav-menu">
-        <a href="#mounathin-pinnani-isai">மௌனத்தின் பின்னணி இசை</a>
-        <a href="#naankaavadhu-nizhal">நான்காவது நிழல் (எழுத்துப் பணியில்)</a>
-        <a href="#author-note">எழுத்தாளரின் குறிப்பு</a>
-        <a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" rel="noopener" class="nav-kindle-btn">
-          📚 Read on Amazon Kindle
+
+      <button id="navToggleBtn" class="nav-toggle" onclick="toggleMobileNav()" aria-label="மெனுவைத் திறக்க / மூட" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav id="navMenu" class="nav-menu">
+        <a href="#mounathin-pinnani-isai" onclick="closeMobileNav()">மௌனத்தின் பின்னணி இசை</a>
+        <a href="#naankaavadhu-nizhal" onclick="closeMobileNav()">நான்காவது நிழல்</a>
+        <a href="#author-note" onclick="closeMobileNav()">எழுத்தாளரின் குறிப்பு</a>
+        <a href="https://www.amazon.in/dp/B0HQK6726R" target="_blank" rel="noopener" class="nav-kindle-btn" onclick="closeMobileNav()">
+          📚 Amazon Kindle
         </a>
       </nav>
     </div>
   </header>
 
-  <!-- Literary Welcome -->
+  <!-- Literary Welcome Banner -->
   <section class="hero-literary">
-    <div class="ornament">✦ ✦ ✦</div>
-    <h1 class="hero-quote">“ஒவ்வொரு புத்தகமும் நாம் வாழ நினைத்த இன்னொரு வாழ்க்கையின் திறவுகோல்.”</h1>
-    <p class="hero-subtext">
-      எழுத்தாளர் <strong>காசிராமன் (KASI)</strong> அவர்களின் வாசகர் பக்கத்திற்கு நல்வரவு. இங்கே புத்தகங்களின் முதல் பக்கங்களைப் புரட்டிப் பார்க்கலாம், கதை மாந்தர்களைச் சந்திக்கலாம்.
-    </p>
+    <div class="hero-banner-card">
+      <div class="hero-badge">📖 எழுத்தாளர் காசிராமன் (KASI) • வாசகர் பக்கம்</div>
+      <h1 class="hero-quote">“ஒவ்வொரு புத்தகமும் நாம் வாழ நினைத்த இன்னொரு வாழ்க்கையின் திறவுகோல்.”</h1>
+      <p class="hero-subtext">
+        எழுத்தாளர் <strong>காசிராமன் (KASI)</strong> அவர்களின் அதிகாரப்பூர்வ வாசகர் பக்கத்திற்கு நல்வரவு. இங்கே புத்தகங்களின் முதல் பக்கங்களைப் புரட்டிப் பார்க்கலாம், கதை மாந்தர்களைச் சந்திக்கலாம்.
+      </p>
+    </div>
   </section>
 
   <!-- Two Books on the Reading Table -->
@@ -842,6 +985,24 @@
 
     let currentBook = 'book1';
     let currentPage = 0;
+
+    function toggleMobileNav() {
+      const menu = document.getElementById('navMenu');
+      const btn = document.getElementById('navToggleBtn');
+      const isOpen = menu.classList.toggle('open');
+      btn.textContent = isOpen ? '✕' : '☰';
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    function closeMobileNav() {
+      const menu = document.getElementById('navMenu');
+      const btn = document.getElementById('navToggleBtn');
+      if (menu && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        btn.textContent = '☰';
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
 
     function openReader(bookKey, pageIdx) {
       currentBook = bookKey;
